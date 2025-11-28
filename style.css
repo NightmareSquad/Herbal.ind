@@ -1,0 +1,199 @@
+/* RESET GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+    background: #f3ffe8;
+}
+
+/* Prevent ANY ELEMENT from causing overflow */
+img, section, div {
+    max-width: 100%;
+}
+
+/* HEADER */
+.top-header {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    box-shadow: 0 6px 22px rgba(0,0,0,0.25);
+    margin: 0 auto;
+}
+
+/* HERO SECTION (FIX overflow di iPhone) */
+.hero {
+    background: linear-gradient(135deg, #00c853, #64dd17, #aeea00);
+    color: white;
+    text-align: center;
+    padding: 90px 20px 80px;
+    border-radius: 0 0 35px 35px;
+
+    /* FIX utama */
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* CTA MAIN */
+.cta-main {
+    background: #ff9800;
+    color: #fff;
+    padding: 18px 40px;
+    border-radius: 40px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: .25s;
+    margin: 15px 8px;
+    display: inline-block;
+    box-shadow: 0 5px 15px rgba(255,152,0,0.5);
+}
+
+.cta-main:hover {
+    background: #ffa726;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(255,152,0,0.6);
+}
+
+/* CTA SECONDARY */
+.cta-secondary {
+    background: white;
+    color: #2e7d32;
+    padding: 16px 34px;
+    border-radius: 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid #2e7d32;
+    cursor: pointer;
+    transition: .25s;
+    margin: 15px 8px;
+    display: inline-block;
+}
+
+.cta-secondary:hover {
+    background: #c8f7cf;
+    transform: translateY(-4px);
+}
+
+/* SECTION UNIVERSAL */
+section {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* CONTENT CARDS (MARGIN DIPERKECIL AGAR TIDAK OVERFLOW) */
+.benefits, .why, .product-details, .testimonials {
+    padding: 50px 20px;
+    background: #ffffff;
+    border-radius: 18px;
+    margin: 25px 12px; /* FIX */
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+}
+
+.benefits h2, .why h2, .product-details h2, .testimonials h2 {
+    color: #2e7d32;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* IMAGE RESPONSIVE */
+.image-box {
+    width: 100%;
+    border-radius: 18px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* TESTI */
+.testi {
+    background: #ffffff;
+    padding: 18px 20px;
+    border-radius: 12px;
+    margin: 12px 0;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    border-left: 5px solid #00c853;
+}
+
+/* CTA BAWAH */
+.cta2 {
+    text-align: center;
+    padding: 60px 25px;
+    background: linear-gradient(135deg, #64dd17, #00c853);
+    color: white;
+    border-radius: 25px;
+    margin: 40px 15px;
+}
+
+/* FLOATING CTA (FIX overflow) */
+.floating-cta {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    background: #ff9800;
+    padding: 18px 26px;
+    border-radius: 40px;
+    color: #fff;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(255,152,0,0.6);
+    transition: .25s;
+
+    z-index: 999;
+    max-width: 90%; /* FIX */
+}
+
+/* RESPONSIVE */
+@media(max-width: 600px) {
+
+    .logo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .cta-main,
+    .cta-secondary {
+        width: 100%;
+    }
+
+    .hero {
+        padding: 70px 20px 70px;
+        border-radius: 0 0 30px 30px;
+    }
+
+    .benefits, .why, .product-details, .testimonials {
+        margin: 18px 10px;
+        padding: 40px 20px;
+    }
+
+    .floating-cta {
+        right: 15px;
+        bottom: 15px;
+        padding: 16px 22px;
+    }
+}
